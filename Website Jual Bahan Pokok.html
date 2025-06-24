@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toko Bahan Pokok Sehari-hari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container" role="banner">
+      <div class="logo" tabindex="0">BahanPokok</div>
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="#home" tabindex="0">Beranda</a>
+        <a href="#categories" tabindex="0">Kategori</a>
+        <a href="#products" tabindex="0">Produk</a>
+        <a href="#about" tabindex="0">Tentang</a>
+        <a href="#contact" tabindex="0">Kontak</a>
+      </nav>
+      <button aria-label="Buka menu navigasi" class="mobile-menu-button" aria-controls="mobile-nav" aria-expanded="false">
+        <span class="material-icons">menu</span>
+      </button>
+    </div>
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-label" tabindex="-1">
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+        <button aria-label="Tutup menu navigasi" class="mobile-nav-close">
+          <span class="material-icons">close</span>
+        </button>
+        <a href="#home" tabindex="0">Beranda</a>
+        <a href="#categories" tabindex="0">Kategori</a>
+        <a href="#products" tabindex="0">Produk</a>
+        <a href="#about" tabindex="0">Tentang</a>
+        <a href="#contact" tabindex="0">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Bagian utama beranda">
+      <div class="hero-text">
+        <h1>Bahan Pokok Segar & Berkualitas</h1>
+        <p>Segarkan dapur Anda dengan bahan pokok terbaik yang langsung diantar ke rumah Anda.</p>
+        <button class="btn-primary" type="button" id="shop-now-btn">Belanja Sekarang</button>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="Gambar-Sayur.jpg" />
+      </div>
+    </section>
+
+    <section id="categories" aria-labelledby="categories-title">
+      <h2 class="section-title" id="categories-title">Kategori Pilihan</h2>
+      <div class="categories-grid">
+        <article class="category-card" tabindex="0" role="link" aria-label="Sayur Segar">
+          <div class="category-image">
+            <img src="Foto-Sayur.jpg" />
+          </div>
+          <h3 class="category-title">Sayur Segar</h3>
+        </article>
+        <article class="category-card" tabindex="0" role="link" aria-label="Buah-buahan">
+          <div class="category-image">
+            <img src="Foto-Buah.png" />
+          </div>
+          <h3 class="category-title">Buah-buahan</h3>
+        </article>
+        <article class="category-card" tabindex="0" role="link" aria-label="Bumbu dan Rempah">
+          <div class="category-image">
+            <img src="Foto-Rempah.jpg" />
+          </div>
+          <h3 class="category-title">Bumbu dan Rempah</h3>
+        </article>
+        <article class="category-card" tabindex="0" role="link" aria-label="Beras dan Serealia">
+          <div class="category-image">
+            <img src="Beras-Serealia.jpg" />
+          </div>
+          <h3 class="category-title">Beras dan Serealia</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="products" aria-labelledby="products-title">
+      <h2 class="section-title" id="products-title">Produk Terbaru</h2>
+      <div class="products-grid" role="list" aria-live="polite" aria-relevant="additions">
+        <article class="product-card" role="listitem" tabindex="0" aria-label="Tomat Segar, harga Rp 15.000 per Kg">
+          <div class="product-image">
+            <img src="Tomat.jpg" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Tomat Segar</h3>
+            <div class="product-price" data-price="15000">Rp 15.000 / Kg</div>
+            <button class="btn-add" type="button" aria-label="Tambah Tomat Segar ke keranjang" data-product-id="tomat" data-product-name="Tomat Segar" data-product-price="15000" data-product-unit="Kg">Tambah</button>
+          </div>
+        </article>
+        <article class="product-card" role="listitem" tabindex="0" aria-label="Bawang Merah, harga Rp 20.000 per Kg">
+          <div class="product-image">
+            <img src="Bawang-Merah.jpg" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Bawang Merah</h3>
+            <div class="product-price" data-price="20000">Rp 20.000 / Kg</div>
+            <button class="btn-add" type="button" aria-label="Tambah Bawang Merah ke keranjang" data-product-id="bawang" data-product-name="Bawang Merah" data-product-price="20000" data-product-unit="Kg">Tambah</button>
+          </div>
+        </article>
+        <article class="product-card" role="listitem" tabindex="0" aria-label="Kentang Segar, harga Rp 10.000 per Kg">
+          <div class="product-image">
+            <img src="Kentang.jpg" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Kentang Segar</h3>
+            <div class="product-price" data-price="10000">Rp 10.000 / Kg</div>
+            <button class="btn-add" type="button" aria-label="Tambah Kentang Segar ke keranjang" data-product-id="kentang" data-product-name="Kentang Segar" data-product-price="10000" data-product-unit="Kg">Tambah</button>
+          </div>
+        </article>
+        <article class="product-card" role="listitem" tabindex="0" aria-label="Beras Super 5kg, harga Rp 80.000 per paket">
+          <div class="product-image">
+            <img src="Beras.jpg" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Beras Super 5kg</h3>
+            <div class="product-price" data-price="80000">Rp 80.000 / Paket</div>
+            <button class="btn-add" type="button" aria-label="Tambah Beras Super 5kg ke keranjang" data-product-id="beras-super" data-product-name="Beras Super 5kg" data-product-price="80000" data-product-unit="Paket">Tambah</button>
+          </div>
+        </article>
+        <article class="product-card" role="listitem" tabindex="0" aria-label="Bawang Putih, harga Rp 15.000 per Paket">
+          <div class="product-image">
+            <img src="Bawang-Putih.jpg" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Bawang Putih</h3>
+            <div class="product-price" data-price="15000">Rp 15.000 / Paket</div>
+            <button class="btn-add" type="button" aria-label="Tambah Bawang Putih ke keranjang" data-product-id="bawang-putih" data-product-name="Bawang Putih" data-product-price="15000" data-product-unit="Paket">Tambah</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">Tentang Kami</h2>
+      <p style="max-width: 700px; margin: 0 auto; text-align: center; color: #374151; font-size: 1.1rem;">
+        BahanPokok adalah toko online terpercaya yang menyediakan berbagai bahan pokok segar berkualitas dengan harga terbaik. Kami berkomitmen menghadirkan pengalaman belanja mudah dan nyaman dengan pengiriman cepat langsung ke rumah Anda.
+      </p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Hubungi Kami</h2>
+      <p style="max-width: 700px; margin: 0 auto; text-align: center; color: #374151; font-size: 1.1rem; margin-bottom: 32px;">
+        Punya pertanyaan atau butuh bantuan? Hubungi kami melalui email atau telepon di bawah ini.
+      </p>
+      <div style="max-width: 400px; margin: 0 auto; text-align: center; color: #1f2937; font-weight: 600;">
+        <p>Email: <a href="mailto:info@bahanpokok.com">info@bahanpokok.com</a></p>
+        <p>Telepon: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+      </div>
+    </section>
+  </main>
+
+  <button class="floating-cart-btn" aria-label="Lihat keranjang belanja" tabindex="0" title="Lihat keranjang belanja">
+    <span class="material-icons" aria-hidden="true">shopping_cart</span>
+    <span class="floating-cart-badge" aria-live="polite" aria-atomic="true" id="cart-count" style="display:none;">0</span>
+  </button>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title" tabindex="-1">
+    <div class="modal">
+      <header class="modal-header">
+        <h2 id="cart-modal-title" class="modal-title">Keranjang Belanja</h2>
+        <button class="modal-close-btn" aria-label="Tutup keranjang" id="cart-modal-close">
+          <span class="material-icons">close</span>
+        </button>
+      </header>
+      <section class="modal-body" id="cart-modal-body" tabindex="0" aria-live="polite" aria-relevant="additions removals">
+        <p id="cart-empty-msg" style="text-align:center; color: #6b7280; font-weight: 600;">Keranjang Anda kosong.</p>
+        <div id="cart-items-list"></div>
+        <div id="cart-summary" class="cart-summary" style="display:none;"></div>
+        <button id="checkout-btn" class="btn-checkout" style="display:none;">Lanjut ke Pembayaran</button>
+      </section>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title" tabindex="-1">
+    <div class="modal">
+      <header class="modal-header">
+        <h2 id="checkout-modal-title" class="modal-title">Pembayaran</h2>
+        <button class="modal-close-btn" aria-label="Tutup pembayaran" id="checkout-modal-close">
+          <span class="material-icons">close</span>
+        </button>
+      </header>
+      <section class="modal-body">
+        <form id="checkout-form" class="checkout-form" novalidate>
+          <div class="form-group">
+            <label for="full-name" class="checkout-section-title">Nama Lengkap</label>
+            <input type="text" id="full-name" name="fullName" required aria-required="true" autocomplete="name" />
+            <span role="alert" class="error-message" style="color:#dc2626; display:none;"></span>
+          </div>
+          <div class="form-group">
+            <label for="address" class="checkout-section-title">Alamat Pengiriman</label>
+            <textarea id="address" name="address" rows="3" required aria-required="true" autocomplete="street-address"></textarea>
+            <span role="alert" class="error-message" style="color:#dc2626; display:none;"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="checkout-section-title">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" pattern="\\+?\\d{7,15}" />
+            <small>Contoh: +628123456789</small>
+            <span role="alert" class="error-message" style="color:#dc2626; display:none;"></span>
+          </div>
+          <div class="form-group">
+            <label for="payment-method" class="checkout-section-title">Metode Pembayaran</label>
+            <select id="payment-method" name="paymentMethod" required aria-required="true">
+              <option value="" disabled selected>Pilih metode pembayaran</option>
+              <option value="transfer">Transfer Bank</option>
+              <option value="cod">Bayar di Tempat (COD)</option>
+              <option value="ewallet">E-Wallet</option>
+            </select>
+            <span role="alert" class="error-message" style="color:#dc2626; display:none;"></span>
+          </div>
+          <div class="form-group">
+            <label for="receipt" class="checkout-section-title">
+              <input type="checkbox" id="receipt" name="receipt" />
+              Kirimkan struk melalui email
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="checkout-cancel-btn">Batal</button>
+            <button type="submit" class="btn-checkout">Pesan Sekarang</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- Order Success Modal -->
+  <div id="order-success-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="order-success-title" tabindex="-1">
+    <div class="modal" style="max-width:400px; text-align:center; padding: 40px 24px;">
+      <header class="modal-header" style="border-bottom:none; padding-bottom:0;">
+        <h2 id="order-success-title" class="modal-title">Pesanan Berhasil!</h2>
+        <button class="modal-close-btn" aria-label="Tutup pesan sukses" id="order-success-close">
+          <span class="material-icons">close</span>
+        </button>
+      </header>
+      <p class="order-success">Terima kasih telah berbelanja di Bahan Pokok! Pesanan Anda akan segera kami proses.</p>
+      <button class="btn-primary" id="order-success-ok-btn">Kembali ke Beranda</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
